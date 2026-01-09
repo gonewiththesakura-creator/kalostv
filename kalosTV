@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的链接主页 | My Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- 全局样式重置 --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            /* 背景：你可以修改这里的渐变色 */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* --- 主容器 (限制最大宽度，模拟手机视图) --- */
+        .container {
+            width: 100%;
+            max-width: 480px; /* 限制在手机宽度，在大屏幕上也好看 */
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        /* --- 个人资料区域 --- */
+        .profile-section {
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            margin-bottom: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .bio {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        /* --- 链接按钮区域 --- */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px; /* 按钮之间的间距 */
+        }
+
+        .link-btn {
+            display: flex; /* 让文字和图标垂直居中 */
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            background: rgba(255, 255, 255, 0.9); /* 半透明白色背景 */
+            padding: 16px 20px;
+            border-radius: 30px; /* 圆角按钮 */
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* 按钮悬停/点击效果 */
+        .link-btn:hover, .link-btn:active {
+            transform: scale(1.02); /* 轻微放大 */
+            background: #ffffff;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        /* 如果需要特定按钮有不同颜色（例如主要行动按钮） */
+        .link-btn.highlight {
+            background-color: #ff4757;
+            color: white;
+        }
+        
+        /* 按钮内的小图标样式 */
+        .link-btn i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* --- 底部社交图标 --- */
+        .social-icons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .social-icon:hover {
+            opacity: 1;
+        }
+
+        /* --- 底部版权 --- */
+        .footer {
+            margin-top: 30px;
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-section">
+            <img src="https://ui-avatars.com/api/?name=User&background=random&size=128" alt="头像" class="avatar">
+            <h1 class="name">@你的名字</h1>
+            <p class="bio">在这里写一句简短的个人简介<br>分享生活 | 科技 | 摄影</p>
+        </div>
+
+        <div class="links">
+            <a href="https://www.your-website.com" class="link-btn highlight" target="_blank">
+                <i class="fa-solid fa-star"></i> 访问我的官方网站
+            </a>
+
+            <a href="https://weibo.com" class="link-btn" target="_blank">
+                <i class="fa-brands fa-weibo"></i> 关注我的微博
+            </a>
+
+            <a href="#" class="link-btn" target="_blank">
+                <i class="fa-brands fa-weixin"></i> 加我微信 (WeChat)
+            </a>
+
+            <a href="https://www.bilibili.com" class="link-btn" target="_blank">
+                <i class="fa-brands fa-bilibili"></i> Bilibili 频道
+            </a>
+            
+            <a href="https://www.youtube.com" class="link-btn" target="_blank">
+                <i class="fa-brands fa-youtube"></i> YouTube 频道
+            </a>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="social-icon"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Your Name. All Rights Reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>
